@@ -19,7 +19,7 @@ namespace ss0glib::Math::Vector {
         }
     } Direction2d;
     
-    class Vector2d : AbstractVector { // TODO: separate implementations from declarations in this entire file and in AbstractVector
+    class Vector2d : AbstractVector { // TODO: separate implementations from declarations in this entire file and in AbstractVector (maybe also make them .hpp files?)
         private:
             double mX;
             double mY;
