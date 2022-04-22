@@ -1,7 +1,7 @@
 #ifndef SS0GLIB_MATH_VECTOR_VECTOR3D_HPP
 #define SS0GLIB_MATH_VECTOR_VECTOR3D_HPP
 
-#include "AbstractVector.hpp"
+#include "VectorBase.hpp"
 
 #include <math.h>
 
