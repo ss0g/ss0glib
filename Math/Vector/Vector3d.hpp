@@ -7,7 +7,7 @@
 
 namespace ss0glib::Math::Vector
 {
-    typedef struct Direction3d : public AbstractDirection
+    typedef struct Direction3d : public DirectionBase
     {
         double theta;
         double phi;
@@ -35,7 +35,7 @@ namespace ss0glib::Math::Vector
         }
     } Direction3d;
 
-    class Vector3d : public AbstractVector
+    class Vector3d : public VectorBase
     { // TODO: make a public way to get all private members
         private:
             double mX;

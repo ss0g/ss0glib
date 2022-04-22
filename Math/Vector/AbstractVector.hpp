@@ -2,19 +2,22 @@
 #define SS0GLIB_MATH_VECTOR_ABSTRACTVECTOR_HPP
 
 namespace ss0glib::Math::Vector {
-    typedef struct AbstractDirection {
-        AbstractDirection() {};
-        virtual ~AbstractDirection() = 0;
-    } AbstractDirection;
+    typedef struct DirectionBase {
+        DirectionBase() {};
+        ~DirectionBase() {};
+    } DirectionBase;
     
-    class AbstractVector {
+    class VectorBase {
         protected:
+            VectorBase() {};
+            ~VectorBase() {};
+            
             double mMagnitude;
             
             ///
             /// Should be called in constructor.
             ///
-            virtual double CalculateMagnitude() = 0;
+            double CalculateMagnitude() {};
         public:
             double GetMagnitude() {
                 return mMagnitude;
