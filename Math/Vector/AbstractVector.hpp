@@ -1,3 +1,6 @@
+#ifndef SS0GLIB_MATH_VECTOR_ABSTRACTVECTOR_HPP
+#define SS0GLIB_MATH_VECTOR_ABSTRACTVECTOR_HPP
+
 namespace ss0glib::Math::Vector {
     typedef struct AbstractDirection {
         AbstractDirection() {};
@@ -5,7 +8,7 @@ namespace ss0glib::Math::Vector {
     } AbstractDirection;
     
     class AbstractVector {
-        private:
+        protected:
             double mMagnitude;
             
             ///
@@ -18,3 +21,5 @@ namespace ss0glib::Math::Vector {
             };
     };
 }
+
+#endif
