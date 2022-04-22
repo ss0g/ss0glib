@@ -42,16 +42,13 @@ namespace ss0glib::Math::Vector
             double mX;
             double mY;
             double mZ;
-            
-            double mMagnitude;
-            Direction3d mDirection;
 
             double CalculateMagnitude()
             {
                 return sqrt(pow(mX, 2) + pow(mY, 2) + pow(mZ, 2));
             }
 
-            Direction3d CalculateDirection()
+            DirectionBase CalculateDirection()
             { // don't know if this phi is correct
                 return Direction3d(atan2(mY, mX), atan2(mZ, sqrt(pow(mX, 2) + pow(mY, 2)))); // TODO: check if phi is correct
             }

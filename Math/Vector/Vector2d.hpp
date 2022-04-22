@@ -39,7 +39,7 @@ namespace ss0glib::Math::Vector
                 return sqrt(pow(mX, 2) + pow(mY, 2));
             }
             
-            Direction2d CalculateDirection()
+            DirectionBase CalculateDirection()
             {
                 return Direction2d(atan2(mY, mX));
             }
@@ -67,6 +67,8 @@ namespace ss0glib::Math::Vector
                 mMagnitude = magnitude;
                 mDirection = direction;
             }
+
+            ~Vector2d() {};
 
             double GetX()
             {
