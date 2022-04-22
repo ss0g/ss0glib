@@ -1,5 +1,5 @@
-#ifndef SS0G_MATH_VECTOR_VECTOR2D_HPP
-#define SS0G_MATH_VECTOR_VECTOR2D_HPP
+#ifndef SS0GLIB_MATH_VECTOR_VECTOR2D_HPP
+#define SS0GLIB_MATH_VECTOR_VECTOR2D_HPP
 
 #include "VectorBase.hpp"
 #include "Vector3d.hpp"
@@ -34,9 +34,6 @@ namespace ss0glib::Math::Vector
             double mX;
             double mY;
             
-            double mMagnitude;
-            Direction2d mDirection;
-            
             double CalculateMagnitude()
             {
                 return sqrt(pow(mX, 2) + pow(mY, 2));
@@ -60,7 +57,7 @@ namespace ss0glib::Math::Vector
                 mX = x;
                 mY = y;
                 mMagnitude = CalculateMagnitude();
-                mDirection.theta = atan2(mY, mX);
+                mDirection = Direction2d(atan2(mY, mX));
             }
             
             Vector2d(double magnitude, Direction2d direction)
@@ -69,6 +66,16 @@ namespace ss0glib::Math::Vector
                 mY = magnitude * sin(direction.theta);
                 mMagnitude = magnitude;
                 mDirection = direction;
+            }
+
+            double GetX()
+            {
+                return mX;
+            }
+
+            double GetY()
+            {
+                return mY;
             }
 
             Vector2d operator+(Vector2d& const v)

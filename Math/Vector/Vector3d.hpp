@@ -2,6 +2,7 @@
 #define SS0GLIB_MATH_VECTOR_VECTOR3D_HPP
 
 #include "VectorBase.hpp"
+#include "Vector2d.hpp"
 
 #include <math.h>
 
@@ -87,6 +88,26 @@ namespace ss0glib::Math::Vector
             {
                 Vector3d res = Vector3d(this->mX + v.mX, this->mY + v.mY, this->mZ + v.mZ);
                 return res;
+            }
+
+            double GetX()
+            {
+                return mX;
+            }
+
+            double GetY()
+            {
+                return mY;
+            }
+
+            double GetZ()
+            {
+                return mZ;
+            }
+
+            static Vector3d FromVector2d(Vector2d& const v)
+            {
+                return Vector3d(v.GetX(), v.GetY(), 0);
             }
 
             static Vector3d Zero()
