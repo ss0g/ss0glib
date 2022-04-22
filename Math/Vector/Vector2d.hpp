@@ -1,4 +1,7 @@
-#include "AbstractVector.h"
+#ifndef SS0G_MATH_VECTOR_VECTOR2D_HPP
+#define SS0G_MATH_VECTOR_VECTOR2D_HPP
+
+#include "AbstractVector.hpp"
 
 #include <math.h>
 
@@ -55,5 +58,17 @@ namespace ss0glib::Math::Vector {
                 Vector2d res = Vector2d(this->mX + v.mX, this->mY + v.mY);
                 return res;
             }
+
+            static Vector2d Zero() {
+                return Vector2d(0, 0);
+            }
+
+            static Vector2d Dot(Vector2d& const v1, Vector2d& const v2) {
+                return Vector2d(v1.mX * v2.mX, v1.mY * v2.mY);
+            }
+
+            // static Vector3d cross
     };
 }
+
+#endif
