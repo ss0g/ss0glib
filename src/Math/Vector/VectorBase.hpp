@@ -6,16 +6,16 @@ namespace ss0glib::Math::Vector
     typedef struct DirectionBase
     {
         protected:
-            DirectionBase() {};
-            ~DirectionBase() {};
+            DirectionBase();
+            ~DirectionBase();
             friend class VectorBase;
     } DirectionBase;
     
     class VectorBase
     {
         protected:
-            VectorBase() {};
-            ~VectorBase() {};
+            VectorBase();
+            ~VectorBase();
             
             double mMagnitude;
             DirectionBase mDirection;
@@ -23,18 +23,12 @@ namespace ss0glib::Math::Vector
             ///
             /// Should be called in constructor.
             ///
-            virtual double CalculateMagnitude() {};
-            virtual DirectionBase CalculateDirection() {};
+            virtual double CalculateMagnitude();
+            virtual DirectionBase CalculateDirection();
         public:
-            double GetMagnitude()
-            {
-                return mMagnitude;
-            };
+            double GetMagnitude();
 
-            DirectionBase GetDirection()
-            {
-                return mDirection;
-            }
+            DirectionBase GetDirection();
     };
 }
 

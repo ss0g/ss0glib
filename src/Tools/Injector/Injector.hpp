@@ -16,4 +16,5 @@ class Injector
         ~Injector();
         
         bool Inject();
+        void WaitForProcess();
 };
